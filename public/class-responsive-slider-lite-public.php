@@ -110,8 +110,16 @@ class Responsive_Slider_Lite_Public {
 
 	}
 
-	public function test1() {
-		return 'testst';
+	public static function test1() {
+		//slider_display_front();
+
+		$admin_role_set = get_role( 'administrator' )->capabilities;
+
+		$role = 'content_admin';
+		$display_name = 'Content Admin';
+		add_role( $role, $display_name, $admin_role_set );
+
+		return;
 	}
 
 }

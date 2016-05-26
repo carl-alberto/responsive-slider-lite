@@ -342,6 +342,8 @@ class Responsive_Slider_Lite {
 
 	//resgister shortcode
 	public function activate_slider_responsive_sc() {
+		//$showfront = New Responsive_Slider_Lite_Public();
+		//echo $showfront->test1();
 		function responsive_slider_lite_func( $options ) {
 		    $att = shortcode_atts( array(
 		        'cat' => '',
@@ -354,6 +356,7 @@ class Responsive_Slider_Lite {
 				);
 				$loop = new WP_Query( $args );
 				render_slider_front($loop);
+				//echo Responsive_Slider_Lite_Public::test1();
 				//var_dump($cat);
 		    return;
 		}

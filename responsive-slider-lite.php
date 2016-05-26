@@ -74,6 +74,7 @@ function run_responsive_slider_lite() {
 	$plugin->homeslider_style_admin();
 	$plugin->activate_slider_responsive_sc();
 
+
 	$plugin->run();
 
 //	$plugin_admin = new Responsive_Slider_Lite_Admin();
