@@ -19,18 +19,20 @@ A lightweight responsive slider utilizing the default custom post type and featu
 1. Upload the whole `responsive-slider-lite` directory to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Go to the Responsive slider lite and add your images as featured images, you have the option to assign a category
-4. Use shortcode [rsliderl] in any page or post to load all images, Optional
+4. Use shortcode [rsliderl] in any page or post to load all images.
 
-Additional Parameters:
+Optional Parameters:
 
 Load only a particular category:
 [rsliderl cat="category_name"]
 
 Show Image title:
-[rsliderl title=true]
+[rsliderl title="true"]
 
 Show Image description:
-[rsliderl description=true]
+[rsliderl description="true"]
+
+You can also use combinations like loading a category with title and no images:
 
 
 == Frequently Asked Questions ==
@@ -47,8 +49,9 @@ You need to put the shortcode first in any of your post/pages and enable the plu
 
 == Changelog ==
 
-= 1.0.5 =
-Fixed filtering issue when using the dropdown filter in admin list
+= 1.0.6 =
+-Fixed filtering issue when using the dropdown filter in admin list
+-Category filter will only appear on the slider's list
 
 = 1.0.4 =
 Fixed book post type issue and versioning
