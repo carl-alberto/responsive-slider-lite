@@ -341,11 +341,10 @@ class Responsive_Slider_Lite {
 
 		//add a category filter
 		function add_category_filter() {
-			if (get_post_type()=='responsive_slider_l') {
 				global $typenow;
 				$args=array( 'public' => true, '_builtin' => false );
 				$post_types = get_post_types($args);
-				if ( in_array($typenow, $post_types) ) {
+				if ( ( in_array($typenow, $post_types) ) && ($typenow=='responsive_slider_l') ) {
 					$filters = get_object_taxonomies($typenow);
 					foreach ($filters as $tax_slug) {
 						$tax_id = get_taxonomy($tax_slug);
@@ -368,15 +367,14 @@ class Responsive_Slider_Lite {
 						);
 					}
 				}
-			}
 		}
 
 		//adding query variable in the url
 		function add_category_restriction($query) {
-			if (get_post_type()=='responsive_slider_l') {
 				global $pagenow;
 				global $typenow;
-				if ($pagenow=='edit.php') {
+				echo $typenow;
+				if (($pagenow=='edit.php') && ($typenow=='responsive_slider_l')) {
 					$filters = get_object_taxonomies($typenow);
 					foreach ($filters as $tax_slug) {
 						$var = &$query->query_vars[$tax_slug];
@@ -391,7 +389,6 @@ class Responsive_Slider_Lite {
 					}
 				}
 				return $query;
-			}
 		}
 
 		add_action( 'restrict_manage_posts', 'add_category_filter' );
