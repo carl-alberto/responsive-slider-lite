@@ -3,8 +3,8 @@ Contributors: carl-alberto
 Donate link: http://carlalberto.ml/
 Tags: slider, responsive slider, lightweight slider, bootstrap slider, image slider, image gallery, images, gallery, responsive wordpress slider
 Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 4.5.2
+Tested up to: 4.5.2
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,6 +49,9 @@ You need to put the shortcode first in any of your post/pages and enable the plu
 
 == Changelog ==
 
+= 1.0.7 =
+-Fixed bug that echoes the post type in admin
+
 = 1.0.6 =
 -Fixed filtering issue when using the dropdown filter in admin list
 -Category filter will only appear on the slider's list
@@ -71,4 +74,5 @@ In progress features:
 * Options page -  max image size can be defined so images can be auto cropped or set to a standard size, transition delay
 * Multiple template to suit end user tastes
 * Different transitions
-* thumbnail option
+* thumbnail option and bullet nav
+* Presets can defined if slider will be used multiple times

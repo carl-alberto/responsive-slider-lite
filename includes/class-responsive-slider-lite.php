@@ -373,7 +373,7 @@ class Responsive_Slider_Lite {
 		function add_category_restriction($query) {
 				global $pagenow;
 				global $typenow;
-				echo $typenow;
+				//echo $typenow;
 				if (($pagenow=='edit.php') && ($typenow=='responsive_slider_l')) {
 					$filters = get_object_taxonomies($typenow);
 					foreach ($filters as $tax_slug) {
